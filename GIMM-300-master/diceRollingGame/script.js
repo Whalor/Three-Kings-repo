@@ -15,7 +15,7 @@ var enemyHealthDisp;
 var roundDisp;
 var playerHealth = 30;
 var enemyHealth = 15;
-var rounds = 0;
+var rounds = 1;
 
 function gO(string){
   //popup modal
@@ -38,7 +38,7 @@ enemyHealthDisp;
 roundDisp;
 playerHealth = 30;
 enemyHealth = 15;
-rounds = 0;
+rounds = 1;
 
 }
 
@@ -68,6 +68,13 @@ function enemyRoll(){
 
 function nextRound(){
   //var roundL = roundLost();
+  if(rounds%2 == 0) {
+    playerTurn = true;
+    enemyTurn = false;
+  } else {
+    enemyTurn = true;
+    playerTurn = false;
+  }
   if(playerHealth <= 0){
     gO("Nice try kid.");
     resetDice();
@@ -169,6 +176,10 @@ function rollDamage(indexName, placeholderName){
 function dealDamage(num){
   if (playerTurn){
     enemyHealth -= num;
+    nextRound();
+    updateDisp();
+  } else if (enemyTurn){
+    playerHealth -= num;
     nextRound();
     updateDisp();
   }
