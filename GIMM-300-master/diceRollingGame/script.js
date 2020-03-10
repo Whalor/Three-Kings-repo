@@ -6,7 +6,7 @@
 
 //global variables:
 var pictureRef = "";
-var numArray = [1,1,1,1,1,1];
+var numArray = [1,1];
 var gameOver = false;
 var playerTurn = true;
 var enemyTurn = false;
@@ -15,7 +15,7 @@ var enemyHealthDisp;
 var roundDisp;
 var playerHealth = 30;
 var enemyHealth = 15;
-var rounds = 1;
+var rounds = 0;
 
 function gO(string){
   //popup modal
@@ -28,7 +28,7 @@ function gO(string){
 
 function restart(){
 resetDice();
-numArray = [1,1,1,1,1,1];
+numArray = [1,1];
 pictureRef = "";
 gameOver = false;
 enemyTurn = false;
@@ -38,7 +38,7 @@ enemyHealthDisp;
 roundDisp;
 playerHealth = 30;
 enemyHealth = 15;
-rounds = 1;
+rounds = 0;
 
 }
 
@@ -70,16 +70,20 @@ function nextRound(){
   //var roundL = roundLost();
   if(playerHealth <= 0){
     gO("Nice try kid.");
+    resetDice();
     updateDisp();
   }
   else if (playerHealth >= 1 && enemyHealth >= 1){
+    rounds++;
+    console.log(rounds)
     showModal("Next round!"), 
      ("Start Round: " + (rounds));
-  resetDice();
-  updateDisp();
+    resetDice();
+    updateDisp();
   }
   else if (enemyHealth <= 0){
     gO("You win!");
+    resetDice();
     updateDisp();
   }
 }
@@ -154,17 +158,17 @@ function roll(){
 
 function rollDamage(indexName, placeholderName){
   var num = roll();
+  var num2 = roll();
   numArray[indexName] = num;
   var newDice = document.getElementById(placeholderName);
   newDice.src = pictureRef;
-  nextRound();
-  updateDisp();
   dealDamage(num);
   console.log(num);
 }
 
 function dealDamage(num){
   enemyHealth -= num;
+  nextRound();
   updateDisp();
 }
 
