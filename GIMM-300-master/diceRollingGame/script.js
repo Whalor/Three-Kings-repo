@@ -93,7 +93,7 @@ function resetPlayerScore(){
 function showModal(modalTitle, info){
   document.getElementById("modalTitle").innerHTML = modalTitle;
   document.getElementById("runningPlayerScore").innerHTML = "Player health: " + playerHealth;
-  document.getElementById("runningComputerScore").innerHTML = "Enemy helath: " + enemyHealth;
+  document.getElementById("runningComputerScore").innerHTML = "Enemy health: " + enemyHealth;
   document.getElementById("additionalInfo").innerHTML = info;
   $("#modalDisp").modal()
 }
@@ -167,9 +167,11 @@ function rollDamage(indexName, placeholderName){
 }
 
 function dealDamage(num){
-  enemyHealth -= num;
-  nextRound();
-  updateDisp();
+  if (playerTurn){
+    enemyHealth -= num;
+    nextRound();
+    updateDisp();
+  }
 }
 
 function resetDice(){
