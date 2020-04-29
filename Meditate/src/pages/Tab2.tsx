@@ -1,23 +1,24 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
 import './Tab2.css';
 
 const Tab2: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent>
-        <IonHeader collapse="condense">
+        <IonHeader>
           <IonToolbar>
-            <IonTitle size="large">
-                <h3>Meditation Sound Effects</h3>
-            </IonTitle>
+            <IonTitle>Sound Effects</IonTitle>
           </IonToolbar>
         </IonHeader>
+        <IonButton expand="full" shape="round" color="light">Sound one</IonButton>
+        <IonButton expand="full" shape="round" color="light">Sound two</IonButton>
+        <IonButton expand="full" shape="round" color="light">Sound three</IonButton>
+        <IonButton expand="full" shape="round" color="light">Sound four</IonButton>
+        <IonButton expand="full" shape="round" color="light">Sound five</IonButton>
+        <IonButton expand="full" shape="round" color="light">Sound six</IonButton>
+        <IonButton expand="full" shape="round" color="light">Sound seven</IonButton>
+        <IonButton expand="full" shape="round" color="light">Sound eight</IonButton>
       </IonContent>
     </IonPage>
   );
