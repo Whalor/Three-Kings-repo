@@ -225,4 +225,13 @@ http://ionicframework.com/docs/theming/ */
 
     --ion-tab-bar-background: #1f1f1f;
   }
+
+  /** used to remove the arrows form the button ion-input **/
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance:textfield;
+    appearance: none;
+    margin: 0;
+}
 }

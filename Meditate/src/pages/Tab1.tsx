@@ -1,76 +1,10 @@
-import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonItem } from '@ionic/react';
+import React, {Component} from 'react';
+import { IonContent, IonButton, IonInput, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonItem } from '@ionic/react';
 import './Tab1.css';
-import { attachProps } from '@ionic/react/dist/types/components/utils';
+import '../theme/variables.css';
+import Countdown from "../components/Countdown";
 
-interface Props {
-  startTimeInSeconds: number;
-}
-
-interface State {
-  timeRemainingInSeconds: number;
-}
-
-function startClick() {
-  
-}
-
-class CountdownTimer extends React.Component<Props, State> {
-  private timer: any;
-
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      timeRemainingInSeconds: props.startTimeInSeconds
-    };
-  }
-
-  decrementTimeRemaining = () => {
-    if (this.state.timeRemainingInSeconds > 0) {
-      this.setState({
-        timeRemainingInSeconds: this.state.timeRemainingInSeconds - 1
-      });
-    } else {
-      clearInterval(this.timer!);
-    }
-  };
-
-  componentDidMount() {
-    this.timer = setInterval(() => {
-      this.decrementTimeRemaining();
-    }, 1000);
-  }
-
-  render() {
-    return (
-      <IonCard class="customItem">
-      <IonItem>
-    <div className="countdown-timer">
-      <div className="countdown-timer__circle">
-        <svg>
-          <circle
-            r="100"
-            cx="105"
-            cy="105"
-            style={{
-              animation: `countdown-animation ${this.props
-                .startTimeInSeconds}s linear`
-            }}
-          />
-        </svg>
-      </div>
-      <div className="countdown-timer__text">
-        {this.state.timeRemainingInSeconds}s
-      </div>
-    </div>
-    </IonItem>
-    </IonCard>
-    );
-  }
-};
-
-class Tab1 extends React.Component<Props, State> {
-
+class Tab1 extends React.Component {
 
   render() {
     return (
@@ -87,7 +21,11 @@ class Tab1 extends React.Component<Props, State> {
             </IonCardHeader>
           </IonCard>
           <IonCard>
-            <CountdownTimer startTimeInSeconds={60} />
+            <div className="App">
+              <div className="Timers">
+                <Countdown/>
+              </div>
+            </div>
           </IonCard>
         </IonContent>
       </IonPage>
