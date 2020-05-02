@@ -1,0 +1,74 @@
+ion-content ion-toolbar {
+  --background: url(/assets/bg/Title.png) no-repeat center/cover fixed;
+}
+.background-image1{
+  --background: url("/assets/bg/BlueClouds.png") no-repeat center/cover fixed;
+}
+.icon{
+  background-image: url("/assets/bg/Icon.png") no-repeat;
+  background-position: top;
+  background-position: left;
+}
+.medbtn{
+
+}
+
+ion-item {
+  --min-height: 510px;
+  --min-width: 500px;
+
+}
+
+    .countdown-timer {
+      position: absolute;
+      top:5px;
+      bottom:5px;
+      width: 500px;
+      height: 500px;
+      background-image: url("/assets/bg/Icon.png");
+      background-repeat: no-repeat;
+      background-position-x: 5px;
+      background-position-y: 5px;
+      background-size: 200px;
+    }
+    
+    .countdown-timer__circle circle {
+      stroke-dasharray: 604px;
+      stroke-dashoffset: 151px;
+      stroke-linecap: butt;
+      stroke-width: 4px;
+      stroke: #fd4f57;
+      fill: none;
+      
+    }
+    
+    .countdown-timer__circle svg {
+      position: absolute;
+      top:0px;
+      min-width: 700px;
+      min-height: 500px;
+      background-image: url("/assets/bg/Unicorn.png");
+      background-position-x: 300px;
+      background-position-y: 10px;
+      background-size: 300px;
+      background-repeat: no-repeat;
+    }
+    
+    .countdown-timer__text {
+      position: absolute;
+      top: 80px;
+      width: 80px;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+    }
+    
+    @keyframes countdown-animation {
+      from {
+        stroke-dashoffset: 0px;
+      }
+      to {
+        stroke-dashoffset: 151px;
+      }
+    }
+
