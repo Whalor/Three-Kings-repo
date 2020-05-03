@@ -1,0 +1,46 @@
+<IonHeader>
+	<IonToolbar color="dark">
+		<IonTitle>
+			Acadmey Media Player
+		</IonTitle>
+	</IonToolbar>
+</IonHeader>
+
+<IonContent>
+	<IonList>
+		<ItonItem button *ngFor="let track of playlist" (click)="start(track)'>
+			<IonLabel [color]="track == activeTrack ? 'success' : 'light'">
+				{{ track.name }}
+			</IonLabel>
+		</IonItem>
+	</IonList>
+</IonContent>
+
+<IonFooter *ngIf="activeTrack">
+ <IonToolbar color="dark">
+	<IonRow>
+		<Ioncol size="12" class="ion-text-center">
+		  {{ activeTrack.name }}
+		</Ioncol>
+		<IonCol size="12">
+			<IonRange #range [{ngModel}]="progress" max="100" color="success" (touchend)="seek()" (mouseup)="seek()></IonRange>
+		</IonCol>
+		<IonCol size="12" class="ion-text-center">
+
+			<IonButton fill="clear" (click)="prev()" color="light">
+				<IonIcon slot ="icon-only" name='Skip-backward></IonIcon>
+			</IonButton>
+			<IonButton fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying" color="light">
+				<IonIcon slot ="icon-only" name='play></IonIcon>
+			</IonButton>
+			<IonButton fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying" color="light">
+				<IonIcon slot ="icon-only" name='pause></IonIcon>
+			</IonButton>
+			<IonButton fill="clear" (click)="next()" color="light">
+				<IonIcon slot ="icon-only" name='Skip-forward></IonIcon>
+			</IonButton>
+
+
+		</IonCol>
+	</IonRow>
+</IonFooter>
