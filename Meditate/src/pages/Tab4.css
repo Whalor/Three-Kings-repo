@@ -1,0 +1,50 @@
+.background-image5{
+    --background: url("/assets/bg/BlueClouds.png") no-repeat center/cover fixed;
+  }
+
+.titleButton{
+  background-image: url("/assets/bg/TitleButton.png")no-repeat;
+}
+  .container4 {
+    background-image: url("/assets/bg/TitleButton.png");
+    background-size: 150px;
+    background-position: center;
+    text-align: center;
+    size:200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    transform: translateY(-50%);
+  }
+  
+  .container strong4 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .container p4 {
+    font-size: 16px;
+    line-height: 22px;
+    color: #ff00ff;
+    margin: 0;
+  }
+  
+  .container a4 {
+    text-decoration: none;
+  }
+  
+  .button4 {
+    background: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    size:400px;
+    border: none;
+    color: white;
+    padding: 1px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100px;
+  }
