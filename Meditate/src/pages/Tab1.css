@@ -1,3 +1,15 @@
+
+.background-image1{
+  --background: url("/assets/bg/BlueClouds.png") no-repeat center/cover fixed;
+}
+.icon{
+  background-image: url("/assets/bg/Icon.png");
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position: center;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +18,11 @@
 .App {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  background-color: rgb(34, 34, 34);
+  background-color:none; /*Bobbys */
+  background-image: url("/assets/bg/Unicorn.png");
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: center;
   height: 100vh;
   color: rgb(250, 250, 250);
 }
@@ -39,7 +55,7 @@
   border-radius: 4px;
   padding: 20px;
   width: 400px;
-  background-color: rgb(22, 27, 31);
+  background-color: rgba(1, 122, 202, 0.4);
   box-shadow: 0 3px 6px rgb(12, 12, 12);
 }
 .Countdown {
@@ -53,7 +69,7 @@
 }
 
 button {
-  background-color: #202b33;
+  background-color: rgba(0, 16, 105, 0.767);
   border: solid 1px transparent;
   border-radius: 4px;
   padding: 10px 20px;
