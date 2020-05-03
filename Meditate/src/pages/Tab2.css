@@ -1,3 +1,6 @@
 ion-content ion-toolbar {
-    --background: translucent;
-  }
+  --background: translucent;
+}
+.background-image2{
+  --background: url("/assets/bg/PinkClouds.png") no-repeat center/cover fixed;
+}
