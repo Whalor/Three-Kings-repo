@@ -17,7 +17,7 @@ class Tab1 extends React.Component {
           </IonHeader>
           <IonCard color="dark">
             <IonCardHeader class="background-image1">
-              <h3>Click the Start buttong below to begin meditation.</h3>
+              <h3>Set a time and click the Start button below to begin meditation.</h3>
             </IonCardHeader>
           </IonCard>
           <IonCard class="background-image1">
