@@ -9,18 +9,18 @@ class Tab1 extends React.Component {
   render() {
     return (
       <IonPage>
-        <IonContent>
-          <IonHeader>
-            <IonToolbar>
-              <IonTitle size="large">Meditate</IonTitle>
+        <IonContent class="background-image1">
+          <IonHeader class="icon" >
+            <IonToolbar >
+              <IonTitle  size="large">Meditate</IonTitle>
             </IonToolbar>
           </IonHeader>
           <IonCard>
-            <IonCardHeader>
-              <h3>Meditate for how long?</h3>
+            <IonCardHeader class="background-image1">
+              <h3>Click the Start buttong below to begin meditation.</h3>
             </IonCardHeader>
           </IonCard>
-          <IonCard>
+          <IonCard class="background-image1">
             <div className="App">
               <div className="Timers">
                 <Countdown/>
