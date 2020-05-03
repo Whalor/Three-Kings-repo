@@ -5,8 +5,8 @@ import './Tab2.css';
 const Tab2: React.FC = () => {
   return (
     <IonPage>
-      <IonContent>
-        <IonHeader>
+      <IonContent class="background-image2">
+        <IonHeader class="icon">
           <IonToolbar>
             <IonTitle>Sound Effects</IonTitle>
           </IonToolbar>
