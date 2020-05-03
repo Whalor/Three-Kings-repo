@@ -11,14 +11,14 @@ const Tab2: React.FC = () => {
             <IonTitle>Sound Effects</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonButton expand="full" shape="round" color="light">Sound one</IonButton>
-        <IonButton expand="full" shape="round" color="light">Sound two</IonButton>
-        <IonButton expand="full" shape="round" color="light">Sound three</IonButton>
-        <IonButton expand="full" shape="round" color="light">Sound four</IonButton>
-        <IonButton expand="full" shape="round" color="light">Sound five</IonButton>
-        <IonButton expand="full" shape="round" color="light">Sound six</IonButton>
-        <IonButton expand="full" shape="round" color="light">Sound seven</IonButton>
-        <IonButton expand="full" shape="round" color="light">Sound eight</IonButton>
+        <IonButton expand="full" shape="round" color="dark">Sound one</IonButton>
+        <IonButton expand="full" shape="round" color="dark">Sound two</IonButton>
+        <IonButton expand="full" shape="round" color="dark">Sound three</IonButton>
+        <IonButton expand="full" shape="round" color="dark">Sound four</IonButton>
+        <IonButton expand="full" shape="round" color="dark">Sound five</IonButton>
+        <IonButton expand="full" shape="round" color="dark">Sound six</IonButton>
+        <IonButton expand="full" shape="round" color="dark">Sound seven</IonButton>
+        <IonButton expand="full" shape="round" color="dark">Sound eight</IonButton>
       </IonContent>
     </IonPage>
   );

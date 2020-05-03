@@ -12,10 +12,10 @@ class Tab1 extends React.Component {
         <IonContent class="background-image1">
           <IonHeader class="icon" >
             <IonToolbar >
-              <IonTitle  size="large">Meditate</IonTitle>
+              <IonTitle  size="large"/>
             </IonToolbar>
           </IonHeader>
-          <IonCard>
+          <IonCard color="dark">
             <IonCardHeader class="background-image1">
               <h3>Click the Start buttong below to begin meditation.</h3>
             </IonCardHeader>

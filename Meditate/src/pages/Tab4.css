@@ -10,12 +10,13 @@
     background-size: 150px;
     background-position: center;
     text-align: center;
-    size:200px;
+    size:1000px;
     position: absolute;
-    left: 0;
+    left: 50px;
     right: 0;
     top: 20%;
     transform: translateY(-50%);
+    width: 250px;
   }
   
   .container strong4 {
@@ -28,6 +29,7 @@
     line-height: 22px;
     color: #ff00ff;
     margin: 0;
+    size: fit;
   }
   
   .container a4 {
@@ -35,9 +37,6 @@
   }
   
   .button4 {
-    background: none;
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 100%;
     size:400px;
     border: none;
