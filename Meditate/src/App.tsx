@@ -8,7 +8,7 @@ import { IonApp,
         IonIcon,
         IonLabel } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { timer, settings, musicalNote, person} from 'ionicons/icons';
+import { timer, settings, musicalNote, home} from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -58,8 +58,8 @@ const App: React.FC = () => (
             <IonLabel>Settings</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab4" href="tab4">
-            <IonIcon icon={person} />
-            <IonLabel>Profile</IonLabel>
+            <IonIcon icon={home} />
+            <IonLabel>Home</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
